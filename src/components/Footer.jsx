@@ -18,9 +18,9 @@ const FOOTER_NAV = {
     { label: 'AI & Analytics',     to: '/#services' },
   ],
   Contact: [
-    { label: 'hello@creatixhub.com', to: 'mailto:creatixhub21@gmail.com' },
-    { label: '+1 (800) CREATIX',     to: 'tel:+18002732849' },
-    { label: 'HQ: Bangalore, India', to: '#' },
+    { label: 'creatixhub21@gmail.com', to: 'mailto:creatixhub21@gmail.com' },
+    { label: '8269485230',     to: 'tel:+18002732849' },
+    { label: 'Indore, India', to: '#' },
     { label: 'Support Portal',       to: '#' },
   ],
 };

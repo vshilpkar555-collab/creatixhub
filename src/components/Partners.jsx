@@ -263,8 +263,8 @@ export default function Partners() {
               <h2 className={styles.sectionTitle}>Apply to Become<br />a Partner</h2>
               <p className={styles.formSub}>Tell us a bit about your business and what kind of partnership you have in mind. We'll respond within 48 hours.</p>
               <div className={styles.formContact}>
-                <div className={styles.formContactItem}><span>📧</span> partnerships@creatixhub.com</div>
-                <div className={styles.formContactItem}><span>📞</span> +1 (800) CREATIX</div>
+                <div className={styles.formContactItem}><span>📧</span> creatixhub21@gmail.com</div>
+                <div className={styles.formContactItem}><span>📞</span> 8269485230</div>
               </div>
             </div>
             <div className={styles.formRight}>

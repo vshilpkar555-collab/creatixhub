@@ -211,7 +211,7 @@ export default function Company() {
         <div className={styles.heroOrb2} />
         <div ref={hero.ref} className={`${styles.heroContent} ${hero.visible ? styles.fadeIn : ''}`}>
           <div className={styles.heroBadge}>
-            <span className={styles.heroBadgeDot} /> Est. 2012 · Bangalore, India
+            <span className={styles.heroBadgeDot} /> Est. 2012 · Indore, India
           </div>
           <h1 className={styles.heroTitle}>
             We Are <span className={styles.accent}>CreatixHub</span>

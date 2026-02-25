@@ -35,21 +35,21 @@ export default function Contact() {
                 <div className={styles.contactIcon}>📧</div>
                 <div>
                   <div className={styles.contactLabel}>Email Us</div>
-                  <div className={styles.contactValue}>hello@creatixhub.com</div>
+                  <div className={styles.contactValue}>creatixhub21@gmail.com</div>
                 </div>
               </div>
               <div className={styles.contactItem}>
                 <div className={styles.contactIcon}>📞</div>
                 <div>
                   <div className={styles.contactLabel}>Call Us</div>
-                  <div className={styles.contactValue}>+1 (800) CREATIX</div>
+                  <div className={styles.contactValue}>8269485230</div>
                 </div>
               </div>
               <div className={styles.contactItem}>
                 <div className={styles.contactIcon}>📍</div>
                 <div>
                   <div className={styles.contactLabel}>Headquarters</div>
-                  <div className={styles.contactValue}>Bangalore, India</div>
+                  <div className={styles.contactValue}>Indore, India</div>
                 </div>
               </div>
             </div>
