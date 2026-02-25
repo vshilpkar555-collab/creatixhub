@@ -1,0 +1,101 @@
+.page { background: #050a14; color: #e8eef8; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+
+/* HERO */
+.hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 120px 60px 80px; text-align: center; }
+.heroBg { position: absolute; inset: 0; background-image: linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent); }
+.heroOrb1 { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(124,58,237,0.1), transparent 70%); filter: blur(80px); top: -80px; right: -60px; animation: p 8s ease-in-out infinite; pointer-events: none; }
+.heroOrb2 { position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(0,229,255,0.08), transparent 70%); filter: blur(80px); bottom: -60px; left: 5%; animation: p 10s ease-in-out infinite; animation-delay: -4s; pointer-events: none; }
+@keyframes p { 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
+.heroContent { position: relative; z-index: 1; max-width: 700px; opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.heroContent.fadeIn { opacity: 1; transform: translateY(0); }
+.heroBadge { display: inline-flex; align-items: center; gap: 9px; padding: 7px 18px; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.3); border-radius: 100px; font-size: 0.78rem; font-weight: 500; color: #a78bfa; letter-spacing: 0.05em; margin-bottom: 28px; }
+.dot { width: 7px; height: 7px; background: #a78bfa; border-radius: 50%; box-shadow: 0 0 8px #a78bfa; animation: blink 1.8s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+.heroTitle { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.8rem, 5.5vw, 5rem); letter-spacing: -0.035em; line-height: 1.06; color: #fff; margin-bottom: 20px; }
+.accent { color: #7c3aed; }
+.heroSub { font-size: 1.05rem; font-weight: 300; color: #7a8aaa; max-width: 580px; margin: 0 auto 36px; line-height: 1.85; }
+.heroStats { display: flex; align-items: center; justify-content: center; gap: 24px; }
+.heroStat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.heroStat strong { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: #a78bfa; }
+.heroStat span { font-size: 0.75rem; color: #7a8aaa; }
+.heroStatDiv { width: 1px; height: 32px; background: rgba(255,255,255,0.1); }
+
+/* SECTION COMMONS */
+.sectionHead { text-align: center; margin-bottom: 52px; }
+.tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: #7c3aed; text-transform: uppercase; margin-bottom: 10px; }
+.sectionTitle { font-family: 'Syne', sans-serif; font-weight: 700; font-size: clamp(1.9rem, 3.2vw, 2.6rem); letter-spacing: -0.025em; color: #fff; line-height: 1.2; margin-bottom: 12px; }
+.sectionSub { color: #7a8aaa; font-size: 0.95rem; font-weight: 300; max-width: 500px; margin: 0 auto; line-height: 1.85; }
+
+/* PERKS */
+.perksSection { padding: 100px 0; background: #080f1f; border-top: 1px solid rgba(255,255,255,0.06); }
+.perksGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.perkCard { background: #0d1728; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px 28px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, transform 0.3s; }
+.perksVisible .perkCard { opacity: 1; transform: translateY(0); }
+.perkCard:hover { transform: translateY(-4px) !important; border-color: rgba(124,58,237,0.25); }
+.perkIcon { font-size: 1.8rem; margin-bottom: 16px; }
+.perkTitle { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 10px; }
+.perkDesc { font-size: 0.86rem; color: #7a8aaa; line-height: 1.78; font-weight: 300; }
+
+/* CULTURE */
+.cultureSection { padding: 100px 0; background: #050a14; }
+.cultureGrid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: start; opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.cultureGrid.cultureVisible { opacity: 1; transform: translateY(0); }
+.culturePoints { display: flex; flex-direction: column; gap: 24px; }
+.culturePoint { display: flex; gap: 20px; align-items: flex-start; padding: 22px; border-radius: 12px; border: 1px solid transparent; transition: border-color 0.3s, background 0.3s; }
+.culturePoint:hover { background: #0d1728; border-color: rgba(124,58,237,0.2); }
+.cultureNum { flex-shrink: 0; width: 36px; height: 36px; background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.78rem; color: #a78bfa; }
+.cultureTitle { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 1rem; color: #fff; margin-bottom: 8px; }
+.cultureDesc { font-size: 0.875rem; color: #7a8aaa; line-height: 1.75; font-weight: 300; }
+
+/* JOBS */
+.jobsSection { padding: 100px 0; background: #080f1f; border-top: 1px solid rgba(255,255,255,0.06); }
+.jobFilters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+.filterBtn { padding: 9px 20px; background: #0d1728; border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; font-size: 0.82rem; font-weight: 500; color: #7a8aaa; cursor: pointer; transition: all 0.25s; font-family: 'DM Sans', sans-serif; }
+.filterBtn:hover { border-color: rgba(124,58,237,0.3); color: #a78bfa; }
+.filterActive { background: rgba(124,58,237,0.1) !important; border-color: rgba(124,58,237,0.4) !important; color: #a78bfa !important; }
+.jobList { display: flex; flex-direction: column; gap: 16px; }
+
+/* JOB CARD */
+.jobCard { background: #0d1728; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s; }
+.jobCard.jobVisible { opacity: 1; transform: translateY(0); }
+.jobCard:hover { border-color: rgba(124,58,237,0.2); }
+.jobHeader { padding: 28px 32px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.jobLeft { flex: 1; }
+.jobTopRow { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+.jobTitle { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; color: #fff; }
+.urgentBadge { padding: 3px 10px; background: rgba(255,92,138,0.12); border: 1px solid rgba(255,92,138,0.25); border-radius: 4px; font-size: 0.68rem; font-weight: 600; color: #ff5c8a; }
+.jobMeta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.75rem; color: #4a5a7a; margin-bottom: 12px; }
+.jobSkills { display: flex; gap: 8px; flex-wrap: wrap; }
+.skillChip { padding: 3px 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; font-size: 0.68rem; font-weight: 600; color: #7a8aaa; }
+.jobArrow { font-size: 1.4rem; color: #7a8aaa; transition: transform 0.3s; flex-shrink: 0; margin-top: 4px; }
+
+/* JOB DETAIL */
+.jobDetail { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
+.jobDetailOpen { max-height: 1200px; }
+.jobDetailInner { padding: 0 32px 28px; border-top: 1px solid rgba(255,255,255,0.06); }
+.jobAbout { font-size: 0.9rem; color: #c0cce0; line-height: 1.8; font-weight: 300; margin: 20px 0; }
+.jobCols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.jobColTitle { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 0.82rem; color: #a78bfa; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+.jobList { padding-left: 16px; display: flex; flex-direction: column; gap: 8px; }
+.jobList li { font-size: 0.86rem; color: #7a8aaa; line-height: 1.65; font-weight: 300; }
+.applyBtn { display: inline-flex; align-items: center; padding: 12px 28px; background: #7c3aed; color: #fff; font-weight: 600; font-size: 0.88rem; border-radius: 9px; text-decoration: none; transition: box-shadow 0.3s, transform 0.2s; }
+.applyBtn:hover { box-shadow: 0 0 28px rgba(124,58,237,0.45); transform: translateY(-2px); }
+
+/* OPEN APP */
+.openApp { padding: 0 0 100px; }
+.openAppBox { background: #080f1f; border: 1px solid rgba(124,58,237,0.15); border-radius: 20px; padding: 60px; text-align: center; }
+.openAppIcon { font-size: 2.5rem; margin-bottom: 16px; }
+.openAppBox h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; color: #fff; margin-bottom: 12px; }
+.openAppBox p { color: #7a8aaa; font-size: 0.9rem; font-weight: 300; max-width: 460px; margin: 0 auto 28px; line-height: 1.8; }
+.openAppBtn { display: inline-flex; padding: 13px 28px; background: transparent; border: 1px solid rgba(124,58,237,0.4); color: #a78bfa; font-size: 0.88rem; font-weight: 600; border-radius: 9px; text-decoration: none; transition: background 0.3s, box-shadow 0.3s; }
+.openAppBtn:hover { background: rgba(124,58,237,0.12); box-shadow: 0 0 24px rgba(124,58,237,0.2); }
+
+@media (max-width: 960px) {
+  .wrap { padding: 0 24px; } .hero { padding: 100px 24px 60px; }
+  .perksGrid { grid-template-columns: repeat(2, 1fr); }
+  .cultureGrid { grid-template-columns: 1fr; gap: 40px; }
+  .jobCols { grid-template-columns: 1fr; }
+  .jobMeta { display: none; }
+}
+@media (max-width: 600px) { .perksGrid { grid-template-columns: 1fr; } }
